@@ -1,7 +1,6 @@
 # openwrtbwmon
-
-* Based on [wrtbwmon-remixed](https://github.com/nyanginator/wrtbwmon-remixed)
 https://github.com/ingoratsdorf/openwrtbwmon
+* Based on [wrtbwmon-remixed](https://github.com/nyanginator/wrtbwmon-remixed)
 * Adapted from https://code.google.com/p/wrtbwmon
 * Uses [Chart.js](https://www.chartjs.org) and the [chartjs-zoom-plugin](https://github.com/chartjs/chartjs-plugin-zoom), which requires [Hammer.js](https://hammerjs.github.io)
 * Uses [SortTable](https://www.kryogenix.org/code/browser/sorttable/) by Stuart Langridge
