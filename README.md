@@ -1,6 +1,8 @@
 # openwrtbwmon
 https://github.com/ingoratsdorf/openwrtbwmon
+
 * Based on [wrtbwmon-remixed](https://github.com/nyanginator/wrtbwmon-remixed)
+
 * Adapted from https://code.google.com/p/wrtbwmon
 * Uses [Chart.js](https://www.chartjs.org) and the [chartjs-zoom-plugin](https://github.com/chartjs/chartjs-plugin-zoom), which requires [Hammer.js](https://hammerjs.github.io)
 * Uses [SortTable](https://www.kryogenix.org/code/browser/sorttable/) by Stuart Langridge
@@ -57,19 +59,21 @@ What This Is
 
 Original `wrtbwmon`
 --------------------------------
-The original `wrtbwmon` included the possibility of tracking peak and offpeak usage separately. `openwrtbwmon` does not make use of this feature.
+The original `wrtbwmon` included the possibility of tracking peak and offpeak usage separately. `openwrtbwmon` does not make use of this feature, just like `wrtbwmon-remixed`.
 
 ![Original wrtbwmon](https://raw.githubusercontent.com/nyanginator/wrtbwmon-remixed/master/screenshots/screenshot-original.jpg)
 
-Overview of `wrtbwmon-remixed`
+Overview of `openwrtbwmon`
 -------------------------------
 Here is the revised main page:
 
-![wrtbwmon-remixed](https://raw.githubusercontent.com/nyanginator/wrtbwmon-remixed/master/screenshots/screenshot.jpg)
+![openwrtbwmon](https://raw.githubusercontent.com/ingoratsdorf/openwrtbwmon/master/screenshots/screenshot.jpg)
+Some css was changed to allow for dark themes and `dark-reader` plugin for `Mozilla Firefox`.
+IP address wsa added to give better information. The IP is retrieved via the ARP tables.
 
 Clicking on any row will bring up the details page:
 
-![wrtbwmon-remixed Details](https://raw.githubusercontent.com/nyanginator/wrtbwmon-remixed/master/screenshots/screenshot-details.jpg)
+![openwrtbwmon Details](https://raw.githubusercontent.com/ingoratsdorf/openwrtbwmon/master/screenshots/screenshot-details.jpg)
 
 Use the mouse-wheel (or pinch) to zoom in/out of the chart. Click-and-drag (or touch-drag) to pan.
 
