@@ -1,0 +1,59 @@
+# A full day/week/month/year must pass from this date for it to show up in the
+# associated chart. Find this value (UTC seconds since Epoch) using the
+# command: date +%s -d "MM/DD/YY". Data from before this date is ignored, which
+# is useful if you don't want to waste time calculating too far into the past.
+AXISSTARTDATE=1420099200  # 01 Jan 2015
+
+PAGETITLE="Network Usage"
+HEADING="Resets on 1st of every month." # Or whenever you set cron to reset
+DESCRIPTION=""
+MBTOTALQUOTA=""
+
+# If you want to merge the HTML output from multiple routers onto the same
+# page, you will need a unique name for each router
+ROUTERNAME="OpenWRT on WRT1900ACS"
+
+# Subdirectory of /tmp/www/ to publish the usage.htm file to
+WWWSUBDIR="usage/"
+
+# X-axis range for each chart type
+RANGE_DAILY=21
+RANGE_WEEKLY=10
+RANGE_MONTHLY=12
+RANGE_YEARLY=5
+
+# Number of ticks visible on X-axis before having to zoom/pan/drag the chart
+AXISRANGE_DAILY=7
+AXISRANGE_WEEKLY=5
+AXISRANGE_MONTHLY=6
+AXISRANGE_YEARLY=5
+
+# In MB, when users on the watch list are within 2 increments of this value,
+# they will appear on the list
+WATCHLISTSTEP="2"
+
+# You can set a limit per person in every "watch list" defined below. Each
+# watch list should include variables for: quota per person, title, and array
+# of names to watch. The name array should consist of unique 1-word names
+# separated by spaces. For example:
+# 
+#   WATCHLISTARRAY="Calvin Phoebe Justin"
+# 
+# The user Calvin might have devices named (in users.txt) "Calvin's Phone",
+# "Calvin's iPad", and "Calvin's Laptop". All 3 devices would count towards
+# Calvin's quota.
+#
+# NOTES:
+#   a. If you add a new watch list (in addition to the STUDENT and GUEST lists
+#      below), the wrtbwmon script must also be updated. You'd need to add
+#      another line of publishWatchList() with the vars you define below.
+#   b. Prepend "SKIP_" to the name if you want the name to appear in the watch
+#      list but not be turned off when over the specified limit. "SKIP_" would
+#      also restore any suspended connections for that name.
+MBQUOTAPERSTUDENT="2"
+STUDENTWATCHLISTTITLE="Family"
+STUDENTWATCHLISTARRAY="SKIP_Janus SKIP_Jolan SKIP_Ingo SKIP_Tatjana"
+
+MBQUOTAPERGUEST="2"
+GUESTWATCHLISTTITLE="Guests"
+GUESTWATCHLISTARRAY="SKIP_Guest"

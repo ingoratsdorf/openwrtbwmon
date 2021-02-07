@@ -1,0 +1,15 @@
+#!/bin/sh
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+. $DIR/config
+
+if [ ! -d /www/$WWWSUBDIR/js ]; then
+    mkdir -p /www/$WWWSUBDIR/js
+    cp -r $DIR/js /www/$WWWSUBDIR
+fi
+
+if [ ! -d /www/$WWWSUBDIR/css ]; then
+    mkdir -p /www/$WWWSUBDIR/css
+    cp -r $DIR/css /www/$WWWSUBDIR
+fi
+
+$DIR/wrtbwmon publish /tmp/usage.db /tmp/reports /www/$WWWSUBDIR /tmp/users.txt
